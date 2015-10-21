@@ -20,7 +20,8 @@
 
     numList.forEach(function(num) {
       if(num % 3 == 0 && num % 5 == 0) return newNumList.push('fizzbuzz');
-      newNumList.push(num);
+      else if(num % 3 === 0 && num % 5 === 0) return newNumList.push('buzz');
+      else newNumList.push(num);
     });
 
     return newNumList;
