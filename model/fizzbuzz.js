@@ -16,12 +16,15 @@
 
   FizzBuzzModel.prototype.listAllNumberWithFizzBuzz = function() {
     var numList = this.listAllNumber();
-    var newNumList = [];
+    var newNumList = []; //HAVE FIZZ or BUZZ ? 
 
     numList.forEach(function(num) {
+
       if(num % 3 == 0 && num % 5 == 0) return newNumList.push('fizzbuzz');
-      else if(num % 3 === 0 && num % 5 === 0) return newNumList.push('buzz');
-      else newNumList.push(num);
+      if( num % 5 === 0) return newNumList.push('buzz');
+
+      if(num % 3 === 0) return newNumList.push('fizz');
+      newNumList.push(num);
     });
 
     return newNumList;
